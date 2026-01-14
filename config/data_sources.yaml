@@ -1,0 +1,24 @@
+schema_version: 1.0
+
+sources:
+  sf_accounts:
+    type: google_csv
+    url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQdQIccyb6cEyeVAhOvCCWdhfTYTem56AKNNydMNcUJDGOUYIYMR7WpGtNpL_45DkC8Hwx9du_mGDyE/pub?gid=0&single=true&output=csv"
+    required_columns:
+      - AccountId
+      - AccountName
+      - Website
+
+  sf_contacts:
+    type: google_csv
+    url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQdQIccyb6cEyeVAhOvCCWdhfTYTem56AKNNydMNcUJDGOUYIYMR7WpGtNpL_45DkC8Hwx9du_mGDyE/pub?gid=1425541352&single=true&output=csv"
+    required_columns:
+      - ContactId
+      - Email
+
+  domain_alias:
+    type: google_csv
+    url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQdQIccyb6cEyeVAhOvCCWdhfTYTem56AKNNydMNcUJDGOUYIYMR7WpGtNpL_45DkC8Hwx9du_mGDyE/pub?gid=8137088&single=true&output=csv"
+    required_columns:
+      - InputDomain
+      - CanonicalDomain
